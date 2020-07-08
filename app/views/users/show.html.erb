@@ -4,6 +4,15 @@
 
 			<h2>User info</h2>
 				<%= render 'users/profile', user: @user %>
+				<p>
+					<li>
+						フォロー数　<%= @user.followings.count %>
+					</li>
+					<li>
+						フォロワー数　<%= @user.followers.count %>
+					</li>
+			    </p>
+				<%= render 'users/follow_button', user: @user %>
 			<!--同コントローラーのviewで表示ならusersは省略可 -->
 
 			<h2>New book</h2>
