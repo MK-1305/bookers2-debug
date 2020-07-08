@@ -6,10 +6,10 @@
 				<%= render 'users/profile', user: @user %>
 				<p>
 					<li>
-						フォロー数　<%= @user.followings.count %>
+						フォロー数　<%= link_to @user.followings.count, follows_path(@user) %>
 					</li>
 					<li>
-						フォロワー数　<%= @user.followers.count %>
+						フォロワー数　<%= link_to @user.followers.count, followers_path(@user) %>
 					</li>
 			    </p>
 				<%= render 'users/follow_button', user: @user %>
